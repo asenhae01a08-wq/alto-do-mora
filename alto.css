@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+    --cor-fundo: #FFFAF0;
+    --cor-escuro: #2C2416;
+    --cor-destaque: #8B4513;
+    --cor-terroso: #A0522D;
+    --cor-clara: #F5E9D7;
+    --cor-escuro-fundo: #2B221E;
+    --cor-texto-suave: #0f0a04;
+    --cor-logo: #D39A45;
+
+    --fonte-titulo: 'Playfair Display', Georgia, serif;
+    --fonte-texto: 'Source Serif 4', 'Times New Roman', serif;
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-escuro);
+    font-family: var(--fonte-texto);
+    line-height: 1.7;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 4rem;
+
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+
+    background-color: var(--cor-fundo);
+
+    position: relative;
+    z-index: 20;
+}
+
+.brand-area {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* LOGO MI */
+
+.mi-logo {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle at 35% 30%,
+        #F0C878,
+        var(--cor-logo)
+    );
+
+    border: 3px solid #E7BD6A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    box-shadow: 0 3px 8px rgba(80, 45, 15, 0.18);
+
+    flex-shrink: 0;
+}
+
+.mi-logo::before {
+    content: "";
+
+    position: absolute;
+    inset: 5px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.mi-logo span {
+    position: relative;
+    z-index: 2;
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 1.05rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #FFF7E5;
+}
+
+/* NOME */
+
+.nav-brand h1 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--cor-destaque);
+}
+
+.nav-brand p {
+    font-size: 0.75rem;
+
+    letter-spacing: 1px;
+
+    color: var(--cor-texto-suave);
+
+    margin-top: 0.25rem;
+}
+
+/* LINKS */
+
+.nav-links a {
+    font-family: var(--fonte-texto);
+
+    color: var(--cor-escuro);
+
+    text-decoration: none;
+
+    margin-left: 2rem;
+
+    font-size: 0.95rem;
+
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--cor-destaque);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 4rem;
+
+    padding: 4rem;
+
+    align-items: center;
+
+    min-height: 80vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    /* FUNDO PRINCIPAL */
+
+    background-image:
+
+        linear-gradient(
+            to right,
+
+            rgba(255, 250, 240, 0.28) 0%,
+
+            rgba(255, 250, 240, 0.15) 35%,
+
+            rgba(255, 250, 240, 0.06) 65%,
+
+            rgba(255, 250, 240, 0.01) 100%
+        ),
+
+        url("imagens/fundo-hero.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+/* IMAGEM ANTIGA DO HERO DESATIVADA */
+
+.hero-background {
+    display: none;
+}
+
+/* CONTEÚDO */
+
+.hero-content {
+    position: relative;
+
+    z-index: 3;
+}
+
+.tag {
+    font-size: 0.8rem;
+
+    letter-spacing: 2px;
+
+    color: var(--cor-destaque);
+
+    margin-bottom: 1.5rem;
+
+    text-transform: uppercase;
+}
+
+.hero-content h2 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 3.5rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 2rem;
+
+    max-width: 700px;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+
+    color: var(--cor-texto-suave);
+
+    margin-bottom: 2.5rem;
+
+    max-width: 450px;
+}
+
+/* BOTÃO */
+
+.btn {
+    display: inline-block;
+
+    background-color: var(--cor-destaque);
+
+    color: white;
+
+    padding: 0.9rem 1.8rem;
+
+    text-decoration: none;
+
+    border-radius: 2px;
+
+    transition: background-color 0.3s;
+}
+
+.btn i {
+    margin-left: 0.5rem;
+
+    font-size: 0.85rem;
+}
+
+.btn:hover {
+    background-color: var(--cor-terroso);
+}
+
+/* =========================
+   HERO - CARD DA DIREITA
+========================= */
+
+.hero-quote {
+    position: relative;
+
+    z-index: 4;
+
+    min-height: 360px;
+
+    padding: 4rem 2.5rem;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 1.5rem;
+
+    font-style: italic;
+
+    box-shadow: 0 8px 24px rgba(139, 69, 19, 0.18);
+
+    background-color: var(--cor-terroso);
+}
+
+/* IMAGEM DO CARD */
+
+.bg-img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.9;
+
+    z-index: 0;
+}
+
+/* CAMADA SOBRE A IMAGEM */
+
+.hero-quote::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(139, 69, 19, 0.20);
+
+    z-index: 1;
+}
+
+.hero-quote blockquote {
+    position: relative;
+
+    z-index: 2;
+}
+
+/* =========================
+   HISTÓRIA
+========================= */
+
+.historia {
+    display: grid;
+
+    grid-template-columns: 1fr 1.5fr;
+
+    gap: 4rem;
+
+    padding: 5rem 4rem;
+}
+
+.historia-quote {
+    position: relative;
+
+    background-color: var(--cor-clara);
+
+    padding: 3rem 2rem;
+
+    border-radius: 8px;
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 1.6rem;
+
+    line-height: 1.4;
+
+    color: var(--cor-destaque);
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.historia-quote p {
+    position: relative;
+
+    z-index: 2;
+}
+
+.section-label {
+    font-size: 0.8rem;
+
+    letter-spacing: 2px;
+
+    color: var(--cor-terroso);
+
+    text-transform: uppercase;
+
+    margin-bottom: 0.8rem;
+}
+
+.historia-content h2 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 2.2rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 1.5rem;
+}
+
+.historia-content p {
+    margin-bottom: 1.2rem;
+
+    font-size: 1.05rem;
+
+    color: var(--cor-texto-suave);
+}
+
+/* =========================
+   CULTURA
+========================= */
+
+.cultura {
+    background-color: var(--cor-escuro-fundo);
+
+    color: white;
+
+    padding: 5rem 4rem;
+}
+
+.cultura h2 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 2.2rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.cultura-sub {
+    color: #B8B0A5;
+
+    margin-bottom: 3rem;
+
+    max-width: 600px;
+}
+
+.cultura-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+
+.cultura-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 6px;
+
+    padding: 2rem;
+
+    transition: border-color 0.3s;
+}
+
+.cultura-card:hover {
+    border-color: var(--cor-terroso);
+}
+
+.cultura-card .icon {
+    font-size: 1.8rem;
+
+    margin-bottom: 1rem;
+
+    display: block;
+
+    color: var(--cor-terroso);
+}
+
+.cultura-card h3 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 1.2rem;
+
+    margin-bottom: 1rem;
+}
+
+.cultura-card p {
+    color: #B8B0A5;
+
+    font-size: 0.95rem;
+}
+
+/* =========================
+   MESTRES
+========================= */
+
+.mestres {
+    padding: 5rem 4rem;
+
+    background-color: #FFFAF5;
+}
+
+.mestres h2 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 2.2rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.mestres-sub {
+    color: var(--cor-texto-suave);
+
+    margin-bottom: 3rem;
+}
+
+.mestres-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+
+.mestre-card {
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.08);
+
+    background: white;
+}
+
+.mestre-card-header {
+    background: linear-gradient(
+        135deg,
+        var(--cor-destaque),
+        var(--cor-terroso)
+    );
+
+    color: white;
+
+    padding: 1.5rem;
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 1.3rem;
+}
+
+.mestre-foto {
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+}
+
+.mestre-card-body {
+    padding: 1.5rem;
+}
+
+.mestre-card-body h4 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 1.1rem;
+
+    margin-bottom: 1rem;
+
+    color: var(--cor-destaque);
+}
+
+.mestre-card-body p {
+    font-size: 0.95rem;
+
+    color: var(--cor-texto-suave);
+}
+
+/* =========================
+   VISITE
+========================= */
+
+.visite {
+    padding: 5rem 4rem;
+
+    background-color: var(--cor-clara);
+}
+
+.visite h2 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 2.2rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.visite-sub {
+    color: var(--cor-texto-suave);
+
+    margin-bottom: 3rem;
+}
+
+.visite-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+}
+
+.visite-card {
+    background: white;
+
+    padding: 2rem;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.06);
+}
+
+.visite-card .icon {
+    font-size: 1.5rem;
+
+    margin-bottom: 1rem;
+
+    display: block;
+
+    color: var(--cor-terroso);
+}
+
+.visite-card h3 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 1.2rem;
+
+    margin-bottom: 0.8rem;
+
+    color: var(--cor-destaque);
+}
+
+.visite-card p {
+    color: var(--cor-texto-suave);
+
+    font-size: 0.95rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: var(--cor-escuro-fundo);
+
+    color: #B8B0A5;
+
+    padding: 2rem 4rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 0.85rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-right {
+    font-style: italic;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 1.5rem;
+
+        padding: 1.5rem;
+    }
+
+    .brand-area {
+        justify-content: center;
+    }
+
+    .nav-links a {
+        margin: 0 0.75rem;
+    }
+
+    .hero,
+    .historia,
+    .cultura-grid,
+    .mestres-grid,
+    .visite-grid {
+        grid-template-columns: 1fr;
+
+        padding: 3rem 1.5rem;
+
+        gap: 2rem;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-quote {
+        min-height: 280px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 0.5rem;
+
+        text-align: center;
+
+        padding: 1.5rem;
+    }
+}
