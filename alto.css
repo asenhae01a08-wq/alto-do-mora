@@ -34,6 +34,7 @@ body {
     color: var(--cor-escuro);
     font-family: var(--fonte-texto);
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
 
@@ -45,6 +46,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 1.6rem 4rem;
 
     border-bottom: 1px solid rgba(139, 69, 19, 0.1);
@@ -53,12 +55,16 @@ body {
 
     position: relative;
     z-index: 20;
+
+    width: 100%;
 }
 
 .brand-area {
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    min-width: 0;
 }
 
 
@@ -142,6 +148,12 @@ body {
 
 /* LINKS */
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .nav-links a {
     font-family: var(--fonte-texto);
 
@@ -182,6 +194,8 @@ body {
 
     overflow: hidden;
 
+    width: 100%;
+
     /* FUNDO PRINCIPAL */
 
     background-image:
@@ -221,6 +235,8 @@ body {
     position: relative;
 
     z-index: 3;
+
+    min-width: 0;
 }
 
 .tag {
@@ -321,6 +337,8 @@ body {
     box-shadow: 0 8px 24px rgba(139, 69, 19, 0.18);
 
     background-color: var(--cor-terroso);
+
+    min-width: 0;
 }
 
 
@@ -361,6 +379,8 @@ body {
     position: relative;
 
     z-index: 2;
+
+    text-align: center;
 }
 
 
@@ -376,6 +396,8 @@ body {
     gap: 4rem;
 
     padding: 5rem 4rem;
+
+    width: 100%;
 }
 
 .historia-quote {
@@ -400,6 +422,8 @@ body {
     align-items: center;
 
     overflow: hidden;
+
+    min-width: 0;
 }
 
 .historia-quote p {
@@ -418,6 +442,10 @@ body {
     text-transform: uppercase;
 
     margin-bottom: 0.8rem;
+}
+
+.historia-content {
+    min-width: 0;
 }
 
 .historia-content h2 {
@@ -449,6 +477,8 @@ body {
     color: white;
 
     padding: 5rem 4rem;
+
+    width: 100%;
 }
 
 .cultura h2 {
@@ -473,6 +503,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
 
     gap: 2rem;
+
+    width: 100%;
 }
 
 .cultura-card {
@@ -483,6 +515,8 @@ body {
     padding: 2rem;
 
     transition: border-color 0.3s;
+
+    min-width: 0;
 }
 
 .cultura-card:hover {
@@ -522,6 +556,8 @@ body {
     padding: 5rem 4rem;
 
     background-color: #FFFAF5;
+
+    width: 100%;
 }
 
 .mestres h2 {
@@ -544,6 +580,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
 
     gap: 2rem;
+
+    width: 100%;
 }
 
 .mestre-card {
@@ -554,6 +592,8 @@ body {
     box-shadow: 0 2px 8px rgba(139, 69, 19, 0.08);
 
     background: white;
+
+    min-width: 0;
 }
 
 .mestre-card-header {
@@ -578,6 +618,8 @@ body {
     height: 200px;
 
     object-fit: cover;
+
+    display: block;
 }
 
 .mestre-card-body {
@@ -609,6 +651,8 @@ body {
     padding: 5rem 4rem;
 
     background-color: var(--cor-clara);
+
+    width: 100%;
 }
 
 .visite h2 {
@@ -631,6 +675,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
 
     gap: 2rem;
+
+    width: 100%;
 }
 
 .visite-card {
@@ -641,6 +687,8 @@ body {
     border-radius: 8px;
 
     box-shadow: 0 2px 8px rgba(139, 69, 19, 0.06);
+
+    min-width: 0;
 }
 
 .visite-card .icon {
@@ -690,6 +738,8 @@ footer {
     font-size: 0.85rem;
 
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+    width: 100%;
 }
 
 .footer-right {
@@ -697,59 +747,462 @@ footer {
 }
 
 
-/* =========================
-   RESPONSIVO
-========================= */
+/* =========================================================
+   TABLET
+========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 
     .navbar {
-        flex-direction: column;
-
-        gap: 1.5rem;
-
-        padding: 1.5rem;
-    }
-
-    .brand-area {
-        justify-content: center;
+        padding: 1.5rem 2.5rem;
     }
 
     .nav-links a {
-        margin: 0 0.75rem;
-    }
-
-    .hero,
-    .historia,
-    .cultura-grid,
-    .mestres-grid,
-    .visite-grid {
-        grid-template-columns: 1fr;
-
-        padding: 3rem 1.5rem;
-
-        gap: 2rem;
+        margin-left: 1.2rem;
     }
 
     .hero {
-        min-height: auto;
+        gap: 2.5rem;
+        padding: 3rem 2.5rem;
     }
 
     .hero-content h2 {
-        font-size: 2.2rem;
+        font-size: 3rem;
+    }
+
+    .historia,
+    .cultura,
+    .mestres,
+    .visite {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .cultura-grid,
+    .mestres-grid {
+        gap: 1.5rem;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* BODY */
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 1.2rem;
+
+        padding: 1.2rem 1rem;
+
+        text-align: center;
+    }
+
+    .brand-area {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 0.75rem;
+    }
+
+    .mi-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-brand h1 {
+        font-size: 1rem;
+
+        letter-spacing: 1.5px;
+    }
+
+    .nav-brand p {
+        font-size: 0.65rem;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        margin: 0;
+
+        font-size: 0.82rem;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+        padding: 3rem 1.25rem;
+
+        min-height: auto;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .tag {
+        font-size: 0.68rem;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2.35rem;
+
+        line-height: 1.12;
+
+        margin-bottom: 1.3rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+
+        line-height: 1.6;
+
+        margin-bottom: 1.8rem;
+
+        max-width: 100%;
+    }
+
+    .btn {
+        padding: 0.85rem 1.2rem;
+
+        font-size: 0.9rem;
     }
 
     .hero-quote {
-        min-height: 280px;
+        width: 100%;
+
+        min-height: 260px;
+
+        padding: 2rem 1.5rem;
+
+        font-size: 1.25rem;
     }
 
+
+    /* HISTÓRIA */
+
+    .historia {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+
+        padding: 4rem 1.25rem;
+    }
+
+    .historia-quote {
+        width: 100%;
+
+        min-height: 260px;
+
+        padding: 2rem 1.5rem;
+
+        font-size: 1.4rem;
+    }
+
+    .historia-content {
+        width: 100%;
+    }
+
+    .historia-content h2 {
+        font-size: 2rem;
+
+        line-height: 1.2;
+    }
+
+    .historia-content p {
+        font-size: 1rem;
+
+        line-height: 1.75;
+    }
+
+
+    /* CULTURA */
+
+    .cultura {
+        width: 100%;
+
+        padding: 4rem 1.25rem;
+    }
+
+    .cultura h2 {
+        font-size: 2rem;
+
+        line-height: 1.2;
+
+        margin-bottom: 0.8rem;
+    }
+
+    .cultura-sub {
+        font-size: 1rem;
+
+        line-height: 1.6;
+
+        margin-bottom: 2rem;
+    }
+
+    .cultura-grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 1.25rem;
+
+        padding: 0;
+    }
+
+    .cultura-card {
+        width: 100%;
+
+        padding: 1.6rem;
+
+        border-radius: 8px;
+    }
+
+    .cultura-card .icon {
+        font-size: 1.6rem;
+
+        margin-bottom: 0.8rem;
+    }
+
+    .cultura-card h3 {
+        font-size: 1.2rem;
+
+        margin-bottom: 0.8rem;
+    }
+
+    .cultura-card p {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* MESTRES */
+
+    .mestres {
+        width: 100%;
+
+        padding: 4rem 1.25rem;
+    }
+
+    .mestres h2 {
+        font-size: 2rem;
+
+        line-height: 1.2;
+    }
+
+    .mestres-sub {
+        font-size: 1rem;
+
+        line-height: 1.6;
+
+        margin-bottom: 2rem;
+    }
+
+    .mestres-grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+
+        padding: 0;
+    }
+
+    .mestre-card {
+        width: 100%;
+    }
+
+    .mestre-card-header {
+        padding: 1.4rem;
+
+        font-size: 1.25rem;
+    }
+
+    .mestre-foto {
+        width: 100%;
+
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+    .mestre-card-body {
+        padding: 1.5rem;
+    }
+
+    .mestre-card-body h4 {
+        font-size: 1.15rem;
+    }
+
+    .mestre-card-body p {
+        font-size: 0.98rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* VISITE */
+
+    .visite {
+        width: 100%;
+
+        padding: 4rem 1.25rem;
+    }
+
+    .visite h2 {
+        font-size: 2rem;
+
+        line-height: 1.2;
+    }
+
+    .visite-sub {
+        font-size: 1rem;
+
+        line-height: 1.6;
+
+        margin-bottom: 2rem;
+    }
+
+    .visite-grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 1.25rem;
+
+        padding: 0;
+    }
+
+    .visite-card {
+        width: 100%;
+
+        padding: 1.6rem;
+    }
+
+
+    /* FOOTER */
+
     footer {
+        width: 100%;
+
         flex-direction: column;
 
-        gap: 0.5rem;
+        gap: 0.6rem;
 
         text-align: center;
 
-        padding: 1.5rem;
+        padding: 1.5rem 1.25rem;
+
+        font-size: 0.8rem;
+    }
+
+    .footer-right {
+        font-size: 0.78rem;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        padding: 1rem 0.75rem;
+    }
+
+    .nav-links {
+        gap: 0.3rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        padding: 2.5rem 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text {
+        font-size: 0.95rem;
+    }
+
+    .hero-quote {
+        min-height: 230px;
+
+        font-size: 1.15rem;
+    }
+
+    .historia,
+    .cultura,
+    .mestres,
+    .visite {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .historia-content h2,
+    .cultura h2,
+    .mestres h2,
+    .visite h2 {
+        font-size: 1.8rem;
+    }
+
+    .cultura-card,
+    .visite-card {
+        padding: 1.4rem;
     }
 }
