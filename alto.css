@@ -2,12 +2,12 @@
 
 :root {
     --cor-fundo: #FFFAF0;
-    --cor-escuro: #2C2416;
-    --cor-destaque: #eee3db;
+    --cor-escuro: #dfbf89;
+    --cor-destaque: #833f0f;
     --cor-terroso: #A0522D;
     --cor-clara: #F5E9D7;
     --cor-escuro-fundo: #2B221E;
-    --cor-texto-suave: #0f0a04;
+    --cor-texto-suave: #b3936c;
     --cor-logo: #D39A45;
 
     --fonte-titulo: 'Playfair Display', Georgia, serif;
