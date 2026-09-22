@@ -196,8 +196,7 @@ body {
 
     width: 100%;
 
-    /* FUNDO PRINCIPAL */
-
+    /* FUNDO PRINCIPAL - caminho corrigido */
     background-image:
 
         linear-gradient(
@@ -212,7 +211,7 @@ body {
             rgba(255, 250, 240, 0.01) 100%
         ),
 
-        url("fundo-hero.png");
+        url("imagens/fundo-herói.png");
 
     background-size: cover;
 
@@ -370,7 +369,7 @@ body {
 
     inset: 0;
 
-    background: rgba(139, 69, 19, 0.20);
+    background: rgba(139, 69, 19, mode 0.20);
 
     z-index: 1;
 }
@@ -851,7 +850,7 @@ footer {
     }
 
 
-    /* HERO */
+    /* HERO - CORRIGIDO PARA TEXTO LEGÍVEL NO CELULAR */
 
     .hero {
         width: 100%;
@@ -867,10 +866,25 @@ footer {
         min-height: auto;
 
         background-position: center;
+
+        /* Overlay mais forte no mobile */
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(255, 250, 240, 0.92) 0%,
+                rgba(255, 250, 240, 0.88) 45%,
+                rgba(255, 250, 240, 0.75) 100%
+            ),
+            url("imagens/fundo-herói.png");
     }
 
     .hero-content {
         width: 100%;
+        /* Fundo extra para garantir legibilidade */
+        background: rgba(255, 250, 240, 0.92);
+        padding: 1.8rem 1.4rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
 
     .tag {
@@ -1276,7 +1290,7 @@ footer {
     align-items: center;
     gap: 0.6rem;
     background: var(--cor-destaque);
-    color: rgb(207, 81, 7);
+    color: white;
     text-decoration: none;
     padding: 0.8rem 1.2rem;
     border-radius: 8px;
