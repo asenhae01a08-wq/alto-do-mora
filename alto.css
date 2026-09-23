@@ -213,7 +213,7 @@ body {
             rgba(255, 250, 240, 0.06) 65%,
             rgba(255, 250, 240, 0.01) 100%
         ),
-        url("imagens/fundo-herói.png");
+        url("fundo-herói.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -849,7 +849,7 @@ footer {
                 rgba(255, 250, 240, 0.88) 45%,
                 rgba(255, 250, 240, 0.75) 100%
             ),
-            url("imagens/fundo-herói.png");
+            url("fundo-herói.png");
     }
 
     .hero-content {
